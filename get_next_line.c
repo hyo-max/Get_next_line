@@ -6,11 +6,18 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/18 12:56:11 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/22 13:48:31 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+
 char	*get_next_line(int fd)
 {
-	
+	char *buff;
+
+
+	read(fd,)
+	read, malloc, free
+	파일 디스크립터가 파일의 주민번호
 }
