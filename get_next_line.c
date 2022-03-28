@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/28 16:43:13 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:51:09 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,21 @@
 
 char	*buf_save(char *buf_backup)
 {
+	int	i;
 
+	i = 0;
+	while(buf_backup != '\0')
+
+	return (buf_backup);
 }
 
 char	*make_line(char *buf_backup)
 {
 	char	*line;
+
+
+
 	
-
-	while (buf_backup != '\n')
-	{
-		
-	}
-	
-
-
-	buf_backup = 
-
 	return (line);
 }
 
@@ -42,6 +40,7 @@ char	*read_line(int fd, char *buf_backup)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return(NULL);
+	
 	while(!(ft_strchr(buf_backup, '\n')) || !(ft_strchr(buf_backup, '\0')))
 	{
 		read_byte = read(fd, buf, BUFFER_SIZE);
