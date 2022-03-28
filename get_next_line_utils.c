@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:17:04 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/28 14:35:09 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/28 15:32:41 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,19 @@ size_t	ft_strlen(const char *c)
 	while (c[count] != '\0')
 		count++;
 	return (count);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (!c)
+		return ((char *)s);
+	return (NULL);
 }
 
 
