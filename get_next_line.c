@@ -6,21 +6,21 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/28 15:04:42 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/28 16:21:50 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*buf_save()
-{
+// char	*buf_save(char *buf_backup)
+// {
 
-}
+// }
 
-char	*make_line()
-{
+// char	*make_line(char *buf_backup)
+// {
 
-}
+// }
 
 char	*read_line(int fd, char *buf_backup)
 {
@@ -30,7 +30,7 @@ char	*read_line(int fd, char *buf_backup)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return(NULL);
-	while(buf_backup != '\n' || buf_backup != '\0')
+	while(!(ft_strchr(buf_backup, '\n')) || !(ft_strchr(buf_backup, '\0')))
 	{
 		read_byte = read(fd, buf, BUFFER_SIZE);
 		if (read_byte == -1)
@@ -39,22 +39,23 @@ char	*read_line(int fd, char *buf_backup)
 			return (NULL);
 		}
 		buf_backup = ft_strjoin(buf_backup, buf);
-		return (buf_backup);
 	}
+	free(buf);
 	return (buf_backup);
 }
 
 char	*get_next_line(int fd)
 {
 	static char	*buf_backup;
-	char		*line;
+	// char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-
 	buf_backup = read_line(fd, buf_backup);
-	line = make_line();
-	buf_backup = buf_save();
+	if (!buf_backup)
+		return (NULL);
+	// line = make_line(buf_backup);
+	// buf_backup = buf_save(buf_backup);
 
-	return (line);
+	return (buf_backup);
 }

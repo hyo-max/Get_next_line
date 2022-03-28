@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:17:04 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/28 15:32:41 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/28 16:19:15 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@ size_t	ft_strlen(const char *c)
 	return (count);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
+	if (!s)
+	{
+		s = (char *)malloc(sizeof(char) * 1);
+		s[0] = '\0';
+	}
 	while (*s)
 	{
 		if (*s == (char)c)
@@ -35,12 +40,16 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*join;
 	int		i;
 
+	if (!s1)
+	{
+		s1 = (char *)malloc(sizeof(char) * 1);
+		s1[0] = '\0';
+	}
 	if (!s1 || !s2)
 		return (0);
 	join = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
