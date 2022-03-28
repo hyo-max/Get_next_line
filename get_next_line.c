@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/27 23:37:04 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/28 10:32:34 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*read_line(int fd, char *save)
 {
-	char *buf
+	char *buf;
 
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
