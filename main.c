@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:12:51 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/28 14:37:11 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/29 13:57:27 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int	main(void)
 	printf("%s\n",line);
 	free(line);
 	close(fd);
-	
-
 
 //파일 오픈하는 법
 	// int fd;
