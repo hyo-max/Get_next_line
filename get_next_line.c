@@ -6,29 +6,30 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/29 09:38:44 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/29 11:32:04 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
+// char	*buf_save(char *buf_backup)
+// {
 
-char	*buf_save(char *buf_backup)
-{
-
-	return (buf_backup);
-}
+// 	return (buf_backup);
+// }
 
 char	*make_line(char *buf_backup)
 {
 	char	*line;
-	int	i;
+	int		i;
 
 	i = 0;
-	if (!buf_backup[i])
+	while(buf_backup[i] != '\0' || buf_backup[i] != '\n')
+		i++;
+	line = (char *)malloc(sizeof(char) * (i + 1));
+	if (!line)
 		return (NULL);
-	while(buf_backup != '\0')
 
-	
 	return (line);
 }
 
@@ -40,7 +41,6 @@ char	*read_line(int fd, char *buf_backup)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return(NULL);
-	
 	while(!(ft_strchr(buf_backup, '\n')) || !(ft_strchr(buf_backup, '\0')))
 	{
 		read_byte = read(fd, buf, BUFFER_SIZE);
@@ -66,7 +66,7 @@ char	*get_next_line(int fd)
 	if (!buf_backup)
 		return (NULL);
 	line = make_line(buf_backup);
-	buf_backup = buf_save(buf_backup);
+	// buf_backup = buf_save(buf_backup);
 
-	return (buf_backup);
+	return (line);
 }
