@@ -6,17 +6,20 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 19:05:33 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/30 17:08:30 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/30 22:25:36 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GEN_NEXT_LINE_BONUS_H
-# define GEN_NEXT_LINE_BONUS_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 char	*get_next_line(int fd);
+char	*read_line(int fd, char *line, char *temp, char *buf);
+char	*make_line(char *line);
+char	*buf_save(char *line);
 
 size_t	ft_strlen(const char *c);
 char	*ft_strjoin(char *s1, char const *s2);
