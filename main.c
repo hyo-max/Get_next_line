@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 17:12:51 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/29 13:57:27 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/30 12:17:18 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,22 @@ int	main(void)
 	// }
 	line = get_next_line(fd);
 	printf("%s\n",line);
+	printf("%s\n",get_next_line(fd));
+	printf("%s\n",get_next_line(fd));
+	printf("%s\n",get_next_line(fd));
+	printf("%s\n",get_next_line(fd));
 	free(line);
 	close(fd);
+
+	// int fd = open("hello.txt", O_RDWR);
+    // char *line;
+
+    // while ((line = get_next_line(fd)))
+    // {
+    //     printf("%s", line);
+    //     free(line);
+	// }
+	// close(fd);
 
 //파일 오픈하는 법
 	// int fd;

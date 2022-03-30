@@ -6,8 +6,50 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 19:05:30 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/23 19:05:31 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:09:19 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line_bonus.h"
 
+size_t	ft_strlen(const char *c)
+{
+	size_t	count;
+
+	count = 0;
+	while (c[count] != '\0')
+		count++;
+	return (count);
+}
+
+char	*ft_strchr(char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (!c)
+		return ((char *)s);
+	return (NULL);
+}
+
+char	*ft_strjoin(char *s1, char const *s2)
+{
+	char	*join;
+	int		i;
+
+	if (!s1 || !s2)
+		return (0);
+	join = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!join)
+		return (NULL);
+	i = 0;
+	while (*s1 != '\0')
+		join[i++] = *s1++;
+	while (*s2 != '\0')
+		join[i++] = *s2++;
+	join[i] = '\0';
+	return (join);
+}
