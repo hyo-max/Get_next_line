@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 19:05:27 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/30 17:17:59 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:33:37 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	*read_line(int fd, char *line, char *temp, char *buf)
 
 char	*get_next_line(int fd)
 {
-	static char	*line[1024];
+	static char	*line[10240];
 	char		*result;
 	char		*temp;
 	char		*buf;
