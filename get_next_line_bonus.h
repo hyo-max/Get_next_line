@@ -6,16 +6,16 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 19:05:33 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/31 11:15:50 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/31 11:19:47 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 char	*read_line(int fd, char *line, char *temp, char *buf);
