@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 19:05:27 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/30 17:33:37 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/31 09:03:34 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ char	*make_line(char *line)
 	int		i;
 
 	i = 0;
-	if (!line)
-		return (NULL);
 	if (line[0] == '\0')
 		return (NULL);
 	while (line[i] && line[i] != '\n')

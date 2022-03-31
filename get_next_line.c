@@ -6,7 +6,7 @@
 /*   By: hyojpark <hyojpark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 21:16:55 by hyojpark          #+#    #+#             */
-/*   Updated: 2022/03/30 17:03:38 by hyojpark         ###   ########.fr       */
+/*   Updated: 2022/03/31 09:03:08 by hyojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ char	*make_line(char *line)
 	int		i;
 
 	i = 0;
-	if (!line)
-		return (NULL);
 	if (line[0] == '\0')
 		return (NULL);
 	while (line[i] && line[i] != '\n')
@@ -61,9 +59,7 @@ char	*make_line(char *line)
 		i++;
 	}
 	if (line[i] == '\n')
-	{
 		result[i++] = '\n';
-	}
 	result[i] = '\0';
 	return (result);
 }
